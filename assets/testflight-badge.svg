@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="48" viewBox="0 0 160 48">
+  <rect width="160" height="48" rx="8" fill="#111"/>
+  <text x="56" y="30" font-family="Arial" font-size="14" fill="#fff">Get on TestFlight</text>
+  <text x="56" y="20" font-family="Arial" font-size="10" fill="#bbb">iOS beta</text>
+</svg>
