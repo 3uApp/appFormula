@@ -26,7 +26,10 @@ a{color:inherit}img{max-width:100%;height:auto;display:block}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 .contact-form{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;display:grid;gap:8px}
 .contact-form input,.contact-form textarea{background:#0e1118;color:var(--fg);border:1px solid var(--border);border-radius:8px;padding:10px}
-.site-footer{display:flex;gap:16px;justify-content:space-between;border-top:1px solid var(--border);margin-top:30px}
+.site-footer{display:flex;gap:16px;justify-content:space-between;align-items:center;border-top:1px solid var(--border);margin-top:30px}
+.site-footer .footer-links{display:flex;gap:16px}
+.payment-methods{display:flex;gap:8px;align-items:center}
+.payment-methods img{height:24px}
 @media (max-width: 960px){
   .hero{grid-template-columns:1fr}
   .features .grid{grid-template-columns:1fr 1fr}
