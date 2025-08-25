@@ -1,159 +1,65 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SENS Perfumery — صمم عطورك باحتراف</title>
-  <meta name="description" content="تطبيق صمم العطور للعطارين — إدارة المواد، حساب الصيغ، تكلفة الزجاجات، تصدير إلى Excel، ودعم العربية والإنجليزية." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Formulab</title>
+  <meta name="description" content="The advanced FORMULAB platform has everything a perfumer needs to get started." />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <meta property="og:title" content="SENS Perfumery — صمم عطورك باحتراف">
-  <meta property="og:description" content="مرجع وترويج لتطبيق صناعة العطور: إدارة المواد، الصيغ، IFRA، والتكلفة.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://your-domain.example/">
-  <script defer src="app.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
-  <header class="site-header container">
-    <div class="brand">
-      <img src="assets/logo.svg" alt="SENS logo" width="28" height="28" />
-      <span>SENS Perfumery</span>
-    </div>
-    <nav class="nav" aria-label="primary">
-      <a href="#features" data-i18n="nav.features">المزايا</a>
-      <a href="#pricing" data-i18n="nav.pricing">الأسعار</a>
-      <a href="#faq" data-i18n="nav.faq">الأسئلة</a>
-      <a href="#contact" data-i18n="nav.contact">تواصل</a>
-    </nav>
-    <div class="actions">
-      <button id="langToggle" class="btn ghost" aria-label="toggle language">EN</button>
-      <a class="btn primary" id="ctaTop" href="#" data-i18n="cta.download">حمّل التطبيق</a>
-    </div>
+  <header class="header container">
+    <h1 class="brand">Formulab</h1>
   </header>
   <main id="main">
     <section class="hero container">
-      <div class="hero-text">
-        <h1 data-i18n="hero.title">أقوى أداة للعطارين لصناعة العطور</h1>
-        <p class="lead" data-i18n="hero.subtitle">سجّل المواد، كوّن الصيغ، احسب التكاليف، وتأكد من حدود IFRA — في تطبيق واحد سريع يدعم العربية.</p>
-        <div class="cta-group">
-          <a class="btn primary" id="ctaHero" href="#" data-i18n="cta.getApp">جرّب التطبيق الآن</a>
-          <a class="btn" href="#features" data-i18n="cta.learnMore">تعرّف على المزايا</a>
-        </div>
-        <div class="store-badges">
-          <a id="appStoreLink" href="#" aria-label="App Store"><img src="assets/appstore-badge.svg" alt="Download on the App Store"></a>
-          <a id="testflightLink" href="#" aria-label="TestFlight"><img src="assets/testflight-badge.svg" alt="Get on TestFlight"></a>
-        </div>
-        <small class="muted" data-i18n="hero.note">* روابط المتجر/التجربة يمكن تحديثها بسهولة من الملف app.js</small>
-      </div>
-      <div class="hero-media">
-        <img class="device" src="assets/mockup.png" alt="لقطة شاشة للتطبيق — تكوين فورملا وحساب التكاليف">
-      </div>
+      <p class="lead">The advanced FORMULAB platform has everything a perfumer needs to get started.</p>
     </section>
-    <section id="features" class="features container">
-      <h2 data-i18n="features.title">كل ما يحتاجه العطّار المحترف</h2>
+    <section class="features container">
+      <h2>Features</h2>
       <div class="grid">
-        <article class="card">
-          <h3 data-i18n="features.materials.title">قاعدة بيانات المواد</h3>
-          <p data-i18n="features.materials.desc">إضافة/تصنيف المواد، موردين، CAS، تكلفة/جرام، ضغط بخار، وحدود IFRA.</p>
+        <article class="feature">
+          <img src="assets/feature-track.svg" alt="Track your material details" />
+          <h3>Track your material details</h3>
         </article>
-        <article class="card">
-          <h3 data-i18n="features.formulas.title">مُركب الصيغ</h3>
-          <p data-i18n="features.formulas.desc">بناء أكوردات، نسب/جرامات، حساب النسب المئوية تلقائياً، وإجمالي الوزن.</p>
+        <article class="feature">
+          <img src="assets/feature-search.svg" alt="Advanced search within material information" />
+          <h3>Advanced search within material information</h3>
         </article>
-        <article class="card">
-          <h3 data-i18n="features.cost.title">حساب التكلفة</h3>
-          <p data-i18n="features.cost.desc">تكلفة الزجاجة النهائية حسب الحجم والتركيز والهدر وسعر المواد.</p>
+        <article class="feature">
+          <img src="assets/feature-stats.svg" alt="Detailed statistics for your formula" />
+          <h3>Detailed statistics for your formula</h3>
         </article>
-        <article class="card">
-          <h3 data-i18n="features.ifra.title">تحقق IFRA</h3>
-          <p data-i18n="features.ifra.desc">تنبيه تلقائي عند تجاوز مواد مقيّدة بحسب الفئة والاستخدام.</p>
+        <article class="feature">
+          <img src="assets/feature-restrictions.svg" alt="Calculation of restrictions on materials and natural oils" />
+          <h3>Calculation of restrictions on materials and natural oils</h3>
         </article>
-        <article class="card">
-          <h3 data-i18n="features.export.title">تصدير ونسخ احتياطي</h3>
-          <p data-i18n="features.export.desc">تصدير CSV/Excel ونسخ احتياطي محلي/سحابي.</p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="features.ui.title">واجهة ثنائية اللغة</h3>
-          <p data-i18n="features.ui.desc">دعم RTL/‏LTR، مظلم/فاتح، واختصارات لوحة المفاتيح.</p>
+        <article class="feature">
+          <img src="assets/feature-more.svg" alt="and more" />
+          <h3>and more</h3>
         </article>
       </div>
-    </section>
-    <section class="quotes container">
-      <blockquote>
-        <p data-i18n="quotes.q1">“وفّر عليّ ساعات في بناء الأكوردات وتسعير الروائح.”</p>
-        <footer>— <span data-i18n="quotes.a1">مصمم عطور مستقل</span></footer>
-      </blockquote>
-      <blockquote>
-        <p data-i18n="quotes.q2">“أفضل أداة عربية للعطارين — دقيقة وسهلة.”</p>
-        <footer>— <span data-i18n="quotes.a2">مالك ورشة عطور</span></footer>
-      </blockquote>
-    </section>
-    <section id="pricing" class="pricing container">
-      <h2 data-i18n="pricing.title">الأسعار</h2>
-      <div class="plans">
-        <article class="plan">
-          <h3 data-i18n="pricing.basic.title">أساسي</h3>
-          <div class="price">FREE</div>
-          <ul>
-            <li data-i18n="pricing.basic.i1">إدارة مواد وصيغ محدودة</li>
-            <li data-i18n="pricing.basic.i2">تصدير CSV</li>
-          </ul>
-          <a class="btn" href="#" data-i18n="pricing.cta">ابدأ الآن</a>
-        </article>
-        <article class="plan highlight">
-          <h3 data-i18n="pricing.pro.title">محترف</h3>
-          <div class="price">$9 <span>/ شهر</span></div>
-          <ul>
-            <li data-i18n="pricing.pro.i1">غير محدود + IFRA + نسخ احتياطي</li>
-            <li data-i18n="pricing.pro.i2">دعم أولوي</li>
-          </ul>
-          <a class="btn primary" href="#" data-i18n="pricing.cta">ابدأ الآن</a>
-        </article>
-      </div>
-      <p class="muted" data-i18n="pricing.note">* يمكن ربط الشراء بـ App Store أو Stripe على الويب.</p>
-    </section>
-    <section id="faq" class="faq container">
-      <h2 data-i18n="faq.title">الأسئلة الشائعة</h2>
-      <details>
-        <summary data-i18n="faq.q1">هل يدعم التطبيق العربية؟</summary>
-        <p data-i18n="faq.a1">نعم، دعم كامل للواجهة واتجاه RTL، مع ترجمة إنجليزية.</p>
-      </details>
-      <details>
-        <summary data-i18n="faq.q2">هل أستطيع تصدير الصيغ؟</summary>
-        <p data-i18n="faq.a2">نعم إلى CSV/Excel، مع تفاصيل الكُلف والقيود.</p>
-      </details>
-      <details>
-        <summary data-i18n="faq.q3">كيف يتم الشراء؟</summary>
-        <p data-i18n="faq.a3">عبر متجر التطبيقات أو رابط دفع آمن على الويب.</p>
-      </details>
     </section>
     <section id="contact" class="contact container">
-      <h2 data-i18n="contact.title">تواصل معنا</h2>
-      <div class="contact-grid">
-        <a class="btn outline" id="whatsLink" href="#" target="_blank" rel="noopener" data-i18n="contact.whatsapp">واتساب مباشر</a>
-        <a class="btn outline" id="mailLink" href="mailto:info@example.com" data-i18n="contact.email">البريد الإلكتروني</a>
-        <form id="contactForm" class="contact-form" action="#" method="POST">
-          <label for="name" data-i18n="contact.form.name">الاسم</label>
-          <input id="name" name="name" required>
-          <label for="email" data-i18n="contact.form.email">البريد الإلكتروني</label>
-          <input id="email" name="email" type="email" required>
-          <label for="message" data-i18n="contact.form.message">رسالتك</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <button class="btn primary" type="submit" data-i18n="contact.form.send">إرسال</button>
-          <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
-        </form>
+      <h2>Contact us</h2>
+      <div class="contact-links">
+        <a class="btn outline" id="whatsLink" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn outline" id="mailLink" href="mailto:info@example.com">Email</a>
       </div>
     </section>
   </main>
   <footer class="site-footer container">
-    <span>© <span id="year"></span> SENS</span>
-    <a href="#" data-i18n="footer.privacy">الخصوصية</a>
-    <a href="#" data-i18n="footer.terms">الشروط</a>
+    <span>© <span id="year"></span> Formulab</span>
+    <div class="payment-methods">
+      <img src="assets/visa.svg" alt="Visa" width="50" height="32">
+      <img src="assets/mastercard.svg" alt="Mastercard" width="50" height="32">
+      <img src="assets/paypal.svg" alt="PayPal" width="50" height="32">
+    </div>
   </footer>
+  <script>
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
