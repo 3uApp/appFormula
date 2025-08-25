@@ -1,5 +1,6 @@
 :root{--bg:#0b0c0f;--fg:#e7e9ee;--muted:#a7acb8;--primary:#6ee7b7;--card:#12141a;--border:#1f2330}
 *{box-sizing:border-box}
+
 body{margin:0;background:var(--bg);color:var(--fg);font-family:'Cairo',system-ui,Arial,sans-serif;line-height:1.5}
 img{max-width:100%;height:auto;display:block}
 .container{max-width:900px;margin-inline:auto;padding:20px}
@@ -20,3 +21,4 @@ img{max-width:100%;height:auto;display:block}
 .payment-methods img{height:24px}
 @media(max-width:768px){.features .grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.features .grid{grid-template-columns:1fr}.site-footer{flex-direction:column;align-items:flex-start}}
+
