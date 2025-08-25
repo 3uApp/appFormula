@@ -11,53 +11,61 @@
 <body>
   <header class="header container">
     <h1 class="brand">Formulab</h1>
+    <button id="langToggle" class="btn outline">EN</button>
   </header>
   <main id="main">
     <section class="hero container">
-      <p class="lead">The advanced FORMULAB platform has everything a perfumer needs to get started.</p>
+      <p class="lead" data-i18n="hero.lead">The advanced FORMULAB platform has everything a perfumer needs to get started.</p>
     </section>
     <section class="features container">
-      <h2>Features</h2>
+      <h2 data-i18n="features.header">Features</h2>
       <div class="grid">
         <article class="feature">
           <img src="assets/feature-track.svg" alt="Track your material details" />
-          <h3>Track your material details</h3>
+          <h3 data-i18n="feature.track">Track your material details</h3>
         </article>
         <article class="feature">
           <img src="assets/feature-search.svg" alt="Advanced search within material information" />
-          <h3>Advanced search within material information</h3>
+          <h3 data-i18n="feature.search">Advanced search within material information</h3>
         </article>
         <article class="feature">
           <img src="assets/feature-stats.svg" alt="Detailed statistics for your formula" />
-          <h3>Detailed statistics for your formula</h3>
+          <h3 data-i18n="feature.stats">Detailed statistics for your formula</h3>
         </article>
         <article class="feature">
           <img src="assets/feature-restrictions.svg" alt="Calculation of restrictions on materials and natural oils" />
-          <h3>Calculation of restrictions on materials and natural oils</h3>
+          <h3 data-i18n="feature.restrictions">Calculation of restrictions on materials and natural oils</h3>
         </article>
         <article class="feature">
           <img src="assets/feature-more.svg" alt="and more" />
-          <h3>and more</h3>
+          <h3 data-i18n="feature.more">and more</h3>
+        </article>
+        <article class="feature">
+          <img src="assets/feature-more.svg" alt="Full app backup" />
+          <h3 data-i18n="feature.backup">Full app backup</h3>
+        </article>
+        <article class="feature">
+          <img src="assets/feature-more.svg" alt="iCloud backup across all your devices" />
+          <h3 data-i18n="feature.icloud">iCloud backup across all your devices</h3>
+        </article>
+        <article class="feature">
+          <img src="assets/feature-more.svg" alt="Export formula or all materials as PDF" />
+          <h3 data-i18n="feature.export">Export formula or all materials as PDF</h3>
         </article>
       </div>
     </section>
     <section id="contact" class="contact container">
-      <h2>Contact us</h2>
+      <h2 data-i18n="contact.title">Contact us</h2>
       <div class="contact-links">
-        <a class="btn outline" id="whatsLink" href="#" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn outline" id="mailLink" href="mailto:info@example.com">Email</a>
+        <a class="btn outline" id="whatsLink" href="https://wa.me/966596204057" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp</a>
+        <a class="btn outline" id="mailLink" href="mailto:allbdrii99@gmail.com" data-i18n="contact.email">Email</a>
       </div>
     </section>
   </main>
-
   <footer class="site-footer container">
     <span>© <span id="year"></span> Formulab</span>
-    <div class="payment-methods">
-      <img src="assets/visa.svg" alt="Visa" width="50" height="32">
-      <img src="assets/mastercard.svg" alt="Mastercard" width="50" height="32">
-      <img src="assets/paypal.svg" alt="PayPal" width="50" height="32">
-    </div>
   </footer>
+  <script src="main.js"></script>
   <script>
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
