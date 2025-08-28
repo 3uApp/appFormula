@@ -32,8 +32,10 @@ html[dir='rtl'] .header{flex-direction:row-reverse}
 .footer-pages-title{margin-bottom:8px;font-weight:600}
 .footer-pages{display:flex;flex-direction:column;gap:6px;width:100%;margin-bottom:20px;font-size:.9rem}
 .footer-pages a{text-decoration:none;color:inherit}
-html[dir='rtl'] .footer-pages{align-items:flex-end}
-html[dir='ltr'] .footer-pages{align-items:flex-start}
+html[dir='rtl'] .footer-pages{align-items:flex-end;text-align:right}
+html[dir='ltr'] .footer-pages{align-items:flex-start;text-align:left}
+html[dir='rtl'] .footer-pages-title{text-align:right}
+html[dir='ltr'] .footer-pages-title{text-align:left}
 .footer-social{display:flex;gap:16px;justify-content:center;margin-bottom:20px}
 .footer-social a{color:inherit;display:inline-flex}
 .footer-social svg,.footer-social img{width:20px;height:20px}
