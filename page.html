@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header container">
+    <h1 class="brand">Formulab</h1>
+    <div class="header-actions">
+      <button id="themeToggle" class="btn outline" aria-label="Toggle theme">🌙</button>
+      <button id="langToggle" class="btn outline">EN</button>
+    </div>
+  </header>
+  <main class="container">
+    <h2 id="pageTitle"></h2>
+    <div id="pageContent"></div>
+  </main>
+  <footer class="site-footer container">
+    <img src="assets/logo.svg" alt="Formulab" class="footer-logo" />
+    <p class="footer-desc" data-i18n="footer.description">The advanced FORMULAB platform has everything a perfumer needs to get started.</p>
+    <div class="download">
+      <p class="download-title" data-i18n="footer.download">Download the app</p>
+      <div class="download-links">
+        <a href="#" id="appStoreLink"><img src="assets/appstore-badge.svg" alt="App Store" /></a>
+      </div>
+    </div>
+    <p class="footer-pages-title" data-i18n="footer.linksTitle">Important links</p>
+    <nav class="footer-pages" id="footerPages"></nav>
+    <div class="footer-social">
+      <a id="whatsLink" href="https://wa.me/966596204057" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <img src="assets/whatsapp.svg" alt="WhatsApp" />
+      </a>
+      <a id="mailLink" href="mailto:allbdrii99@gmail.com" aria-label="Email">
+        <img src="assets/mail.svg" alt="Email" />
+      </a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Formulab</p>
+  </footer>
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(location.search);
+      const slug = params.get('slug');
+      const cfg = loadConfig();
+      const page = cfg.pages.find(p => p.slug === slug);
+      if (page) {
+        const title = page.titles[currentLang] || page.titles.en || '';
+        const content = page.contents[currentLang] || page.contents.en || '';
+        document.getElementById('pageTitle').textContent = title;
+        document.getElementById('pageContent').innerHTML = content;
+      }
+    });
+  </script>
+</body>
+</html>

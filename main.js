@@ -12,10 +12,7 @@ const translations = {
     'feature.export': 'Export formula or all materials as PDF',
     'footer.description': 'The advanced FORMULAB platform has everything a perfumer needs to get started.',
     'footer.download': 'Download the app',
-    'footer.linksTitle': 'Important links',
-    'footer.privacyPolicy': 'Privacy Policy',
-    'footer.faq': 'FAQ',
-    'footer.about': 'About Us'
+    'footer.linksTitle': 'Important links'
   },
   ar: {
     'hero.lead': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
@@ -30,15 +27,45 @@ const translations = {
     'feature.export': 'تصدير الفورملا أو جميع المواد PDF',
     'footer.description': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
     'footer.download': 'تحميل التطبيق',
-    'footer.linksTitle': 'روابط مهمة',
-    'footer.privacyPolicy': 'سياسة الخصوصية',
-    'footer.faq': 'الأسئلة الشائعة',
-    'footer.about': 'من نحن'
+    'footer.linksTitle': 'روابط مهمة'
   }
 };
 
 let currentLang = 'ar';
 let darkMode = true;
+let config = loadConfig();
+
+function renderConfig() {
+  const brand = document.querySelector('.brand');
+  if (brand) brand.textContent = config.siteName;
+
+  const footerLogo = document.querySelector('.footer-logo');
+  if (footerLogo) footerLogo.src = config.siteIcon;
+
+  const pagesNav = document.getElementById('footerPages');
+  if (pagesNav) {
+    pagesNav.innerHTML = '';
+    config.pages.forEach(page => {
+      const a = document.createElement('a');
+      a.href = `page.html?slug=${encodeURIComponent(page.slug)}`;
+      a.textContent = page.titles[currentLang] || '';
+      pagesNav.appendChild(a);
+    });
+  }
+
+  const whats = document.getElementById('whatsLink');
+  if (whats) whats.href = config.contact.whatsapp;
+  const mail = document.getElementById('mailLink');
+  if (mail) mail.href = config.contact.email;
+
+  const footerCopy = document.querySelector('.footer-copy');
+  if (footerCopy) footerCopy.innerHTML = `© <span id="year"></span> ${config.siteName}`;
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const titleEl = document.querySelector('title');
+  if (titleEl) titleEl.textContent = config.siteName;
+}
 
 function applyTranslations() {
   document.documentElement.lang = currentLang;
@@ -50,13 +77,10 @@ function applyTranslations() {
   });
   const toggle = document.getElementById('langToggle');
   if (toggle) toggle.textContent = currentLang === 'ar' ? 'EN' : 'ع';
+  renderConfig();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const whats = document.getElementById('whatsLink');
-  if (whats) whats.href = 'https://wa.me/966596204057';
-  const mail = document.getElementById('mailLink');
-  if (mail) mail.href = 'mailto:allbdrii99@gmail.com';
   const toggle = document.getElementById('langToggle');
   if (toggle) toggle.addEventListener('click', () => {
     currentLang = currentLang === 'ar' ? 'en' : 'ar';
