@@ -11,13 +11,16 @@
 <body>
   <header class="header container">
     <h1 class="brand">Formulab</h1>
-    <button id="langToggle" class="btn outline">EN</button>
+    <div class="header-actions">
+      <button id="themeToggle" class="btn outline" aria-label="Toggle theme">🌙</button>
+      <button id="langToggle" class="btn outline">EN</button>
+    </div>
   </header>
   <main id="main">
     <section class="hero container">
       <p class="lead" data-i18n="hero.lead">The advanced FORMULAB platform has everything a perfumer needs to get started.</p>
     </section>
-    <section class="features container">
+    <section class="features container" id="features">
       <h2 data-i18n="features.header">Features</h2>
       <div class="grid">
         <article class="feature">
@@ -54,17 +57,29 @@
         </article>
       </div>
     </section>
-    <section id="contact" class="contact container">
-      <h2 data-i18n="contact.title">Contact us</h2>
-      <div class="contact-links">
-        <a class="btn outline" id="whatsLink" href="https://wa.me/966596204057" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp</a>
-        <a class="btn outline" id="mailLink" href="mailto:allbdrii99@gmail.com" data-i18n="contact.email">Email</a>
-      </div>
-    </section>
   </main>
   <footer class="site-footer container">
-    <span>© <span id="year"></span> Formulab</span>
+    <img src="assets/logo.svg" alt="Formulab" class="footer-logo" />
+    <p class="footer-desc" data-i18n="footer.description">The advanced FORMULAB platform has everything a perfumer needs to get started.</p>
+    <div class="download">
+      <p class="download-title" data-i18n="footer.download">Download the app</p>
+      <div class="download-links">
+        <a href="#" id="appStoreLink"><img src="assets/appstore-badge.svg" alt="App Store" /></a>
+      </div>
+    </div>
+  <p class="footer-pages-title" data-i18n="footer.linksTitle">روابط مهمة</p>
+  <nav class="footer-pages" id="footerPages"></nav>
+    <div class="footer-social">
+      <a id="whatsLink" href="https://wa.me/966596204057" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <img src="assets/whatsapp.svg" alt="WhatsApp" />
+      </a>
+      <a id="mailLink" href="mailto:allbdrii99@gmail.com" aria-label="Email">
+        <img src="assets/mail.svg" alt="Email" />
+      </a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Formulab</p>
   </footer>
+  <script src="config.js"></script>
   <script src="main.js"></script>
   <script>
     const yearEl = document.getElementById('year');
