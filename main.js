@@ -10,9 +10,12 @@ const translations = {
     'feature.backup': 'Full app backup',
     'feature.icloud': 'iCloud backup across all your devices',
     'feature.export': 'Export formula or all materials as PDF',
-    'contact.title': 'Contact us',
-    'contact.whatsapp': 'WhatsApp',
-    'contact.email': 'Email'
+    'footer.description': 'The advanced FORMULAB platform has everything a perfumer needs to get started.',
+    'footer.download': 'Download the app',
+    'footer.linksTitle': 'Important links',
+    'footer.privacyPolicy': 'Privacy Policy',
+    'footer.faq': 'FAQ',
+    'footer.about': 'About Us'
   },
   ar: {
     'hero.lead': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
@@ -25,13 +28,17 @@ const translations = {
     'feature.backup': 'نسخ احتياطي كامل للتطبيق',
     'feature.icloud': 'نسخ على iCloud لجميع أجهزتك',
     'feature.export': 'تصدير الفورملا أو جميع المواد PDF',
-    'contact.title': 'تواصل معنا',
-    'contact.whatsapp': 'واتساب',
-    'contact.email': 'البريد الإلكتروني'
+    'footer.description': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
+    'footer.download': 'تحميل التطبيق',
+    'footer.linksTitle': 'روابط مهمة',
+    'footer.privacyPolicy': 'سياسة الخصوصية',
+    'footer.faq': 'الأسئلة الشائعة',
+    'footer.about': 'من نحن'
   }
 };
 
 let currentLang = 'ar';
+let darkMode = true;
 
 function applyTranslations() {
   document.documentElement.lang = currentLang;
@@ -55,5 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLang = currentLang === 'ar' ? 'en' : 'ar';
     applyTranslations();
   });
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) themeToggle.addEventListener('click', () => {
+    darkMode = !darkMode;
+    document.body.classList.toggle('light', !darkMode);
+    themeToggle.textContent = darkMode ? '🌙' : '☀️';
+  });
+  document.body.classList.toggle('light', !darkMode);
   applyTranslations();
 });
