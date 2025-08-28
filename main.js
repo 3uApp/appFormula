@@ -12,7 +12,13 @@ const translations = {
     'feature.export': 'Export formula or all materials as PDF',
     'contact.title': 'Contact us',
     'contact.whatsapp': 'WhatsApp',
-    'contact.email': 'Email'
+    'contact.email': 'Email',
+    'footer.description': 'The advanced FORMULAB platform has everything a perfumer needs to get started.',
+    'footer.download': 'Download the app',
+    'footer.pagesTitle': 'Pages',
+    'footer.formulabPrivacy': 'Formulab Privacy',
+    'footer.terms': 'Terms of Use',
+    'footer.privacy': 'Privacy Policy'
   },
   ar: {
     'hero.lead': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
@@ -27,11 +33,18 @@ const translations = {
     'feature.export': 'تصدير الفورملا أو جميع المواد PDF',
     'contact.title': 'تواصل معنا',
     'contact.whatsapp': 'واتساب',
-    'contact.email': 'البريد الإلكتروني'
+    'contact.email': 'البريد الإلكتروني',
+    'footer.description': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
+    'footer.download': 'تحميل التطبيق',
+    'footer.pagesTitle': 'صفحات تعريفية',
+    'footer.formulabPrivacy': 'خصوصية فورميولاب',
+    'footer.terms': 'شروط الاستخدام',
+    'footer.privacy': 'سياسة الخصوصية'
   }
 };
 
 let currentLang = 'ar';
+let darkMode = true;
 
 function applyTranslations() {
   document.documentElement.lang = currentLang;
@@ -55,5 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLang = currentLang === 'ar' ? 'en' : 'ar';
     applyTranslations();
   });
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) themeToggle.addEventListener('click', () => {
+    darkMode = !darkMode;
+    document.body.classList.toggle('light', !darkMode);
+    themeToggle.textContent = darkMode ? '🌙' : '☀️';
+  });
+  document.body.classList.toggle('light', !darkMode);
   applyTranslations();
 });
