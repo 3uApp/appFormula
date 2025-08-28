@@ -42,6 +42,7 @@ const translations = {
 };
 
 let currentLang = 'ar';
+let darkMode = true;
 
 function applyTranslations() {
   document.documentElement.lang = currentLang;
@@ -65,5 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLang = currentLang === 'ar' ? 'en' : 'ar';
     applyTranslations();
   });
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) themeToggle.addEventListener('click', () => {
+    darkMode = !darkMode;
+    document.body.classList.toggle('light', !darkMode);
+    themeToggle.textContent = darkMode ? '🌙' : '☀️';
+  });
+  document.body.classList.toggle('light', !darkMode);
   applyTranslations();
 });

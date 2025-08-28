@@ -4,8 +4,10 @@
 body{margin:0;background:var(--bg);color:var(--fg);font-family:'Cairo',system-ui,Arial,sans-serif;line-height:1.5}
 img{max-width:100%;height:auto;display:block}
 .container{max-width:900px;margin-inline:auto;padding:20px}
-.header{display:flex;justify-content:center;padding-block:20px}
-.brand{font-size:1.8rem;font-weight:800}
+.header{display:flex;justify-content:space-between;align-items:center;padding-block:20px}
+.header-actions{display:flex;gap:8px}
+.brand{font-size:1.5rem;font-weight:800}
+html[dir='rtl'] .header{flex-direction:row-reverse}
 .hero{text-align:center;padding-block:40px}
 .lead{font-size:1.2rem;color:var(--muted)}
 .features h2{text-align:center}
@@ -21,17 +23,21 @@ img{max-width:100%;height:auto;display:block}
 
 /* footer */
 .site-footer{display:block;text-align:center;padding-block:40px;border-top:1px solid var(--border)}
-.footer-logo{width:80px;margin:0 auto 16px}
-.footer-desc{max-width:600px;margin:0 auto 20px;color:var(--muted)}
+.footer-logo{width:40px;margin:0 auto 16px}
+.footer-desc{max-width:600px;margin:0 auto 20px;color:var(--muted);font-size:.9rem}
 .download{margin-bottom:20px}
 .download-title{margin-bottom:12px;font-weight:600}
 .download-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.footer-nav{display:flex;gap:16px;flex-wrap:wrap;width:100%;margin-bottom:20px}
+.download-links img{height:40px}
+.footer-nav{display:flex;gap:16px;flex-wrap:wrap;width:100%;margin-bottom:20px;font-size:.9rem}
 .footer-nav a{text-decoration:none;color:inherit}
 html[dir='rtl'] .footer-nav{justify-content:flex-end}
 html[dir='ltr'] .footer-nav{justify-content:flex-start}
 .footer-social{display:flex;gap:16px;justify-content:center;margin-bottom:20px}
 .footer-social a{color:inherit;display:inline-flex}
-.footer-social svg,.footer-social img{width:24px;height:24px}
-.footer-copy{margin-top:20px;color:var(--muted)}
+.footer-social svg,.footer-social img{width:20px;height:20px}
+.footer-copy{margin-top:20px;color:var(--muted);font-size:.8rem}
+
+/* light theme */
+body.light{--bg:#ffffff;--fg:#0b0c0f;--muted:#555;--card:#f5f5f5;--border:#ddd}
 
