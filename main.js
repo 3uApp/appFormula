@@ -15,9 +15,10 @@ const translations = {
     'contact.email': 'Email',
     'footer.description': 'The advanced FORMULAB platform has everything a perfumer needs to get started.',
     'footer.download': 'Download the app',
-    'footer.home': 'Home',
-    'footer.features': 'Features',
-    'footer.contact': 'Contact us'
+    'footer.pagesTitle': 'Pages',
+    'footer.formulabPrivacy': 'Formulab Privacy',
+    'footer.terms': 'Terms of Use',
+    'footer.privacy': 'Privacy Policy'
   },
   ar: {
     'hero.lead': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
@@ -35,9 +36,10 @@ const translations = {
     'contact.email': 'البريد الإلكتروني',
     'footer.description': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
     'footer.download': 'تحميل التطبيق',
-    'footer.home': 'الرئيسية',
-    'footer.features': 'المزايا',
-    'footer.contact': 'تواصل معنا'
+    'footer.pagesTitle': 'صفحات تعريفية',
+    'footer.formulabPrivacy': 'خصوصية فورميولاب',
+    'footer.terms': 'شروط الاستخدام',
+    'footer.privacy': 'سياسة الخصوصية'
   }
 };
 

@@ -29,10 +29,11 @@ html[dir='rtl'] .header{flex-direction:row-reverse}
 .download-title{margin-bottom:12px;font-weight:600}
 .download-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .download-links img{height:40px}
-.footer-nav{display:flex;gap:16px;flex-wrap:wrap;width:100%;margin-bottom:20px;font-size:.9rem}
-.footer-nav a{text-decoration:none;color:inherit}
-html[dir='rtl'] .footer-nav{justify-content:flex-end}
-html[dir='ltr'] .footer-nav{justify-content:flex-start}
+.footer-pages-title{margin-bottom:8px;font-weight:600}
+.footer-pages{display:flex;flex-direction:column;gap:6px;width:100%;margin-bottom:20px;font-size:.9rem}
+.footer-pages a{text-decoration:none;color:inherit}
+html[dir='rtl'] .footer-pages{align-items:flex-end}
+html[dir='ltr'] .footer-pages{align-items:flex-start}
 .footer-social{display:flex;gap:16px;justify-content:center;margin-bottom:20px}
 .footer-social a{color:inherit;display:inline-flex}
 .footer-social svg,.footer-social img{width:20px;height:20px}
