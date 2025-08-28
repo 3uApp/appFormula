@@ -12,7 +12,12 @@ const translations = {
     'feature.export': 'Export formula or all materials as PDF',
     'contact.title': 'Contact us',
     'contact.whatsapp': 'WhatsApp',
-    'contact.email': 'Email'
+    'contact.email': 'Email',
+    'footer.description': 'The advanced FORMULAB platform has everything a perfumer needs to get started.',
+    'footer.download': 'Download the app',
+    'footer.home': 'Home',
+    'footer.features': 'Features',
+    'footer.contact': 'Contact us'
   },
   ar: {
     'hero.lead': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
@@ -27,7 +32,12 @@ const translations = {
     'feature.export': 'تصدير الفورملا أو جميع المواد PDF',
     'contact.title': 'تواصل معنا',
     'contact.whatsapp': 'واتساب',
-    'contact.email': 'البريد الإلكتروني'
+    'contact.email': 'البريد الإلكتروني',
+    'footer.description': 'منصة فورميولاب المتقدمة تحتوي على كل ما يحتاجه العطار للبدء.',
+    'footer.download': 'تحميل التطبيق',
+    'footer.home': 'الرئيسية',
+    'footer.features': 'المزايا',
+    'footer.contact': 'تواصل معنا'
   }
 };
 
